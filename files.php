@@ -3399,8 +3399,8 @@ class plgProjectsFiles extends \Hubzero\Plugin\Plugin
 		}
 		elseif ($uploaded || $updated || $expanded)
 		{
-			$uploadParts = explode(',', $uploaded);
-			$updateParts = explode(',', $updated);
+			$uploadParts = explode(',', $uploaded ?: '');
+			$updateParts = explode(',', $updated ?: '');
 			$sync        = 1;
 
 			if ($uploaded)
