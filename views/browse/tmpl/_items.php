@@ -8,7 +8,7 @@
 // No direct access
 defined('_HZEXEC_') or die();
 
-foreach ($this->items as $item)
+if (is_array($this->items)) foreach ($this->items as $item)
 {
 	$this->view('_item')
 		 ->set('option', $this->option)
